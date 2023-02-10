@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"> 
+        
+        <title>Document</title>
+    </head>
+    <body>
+        <!--<div id="areaButtons">
+            <button id="blacksmithButton">Blacksmith</button>
+        </div>-->
+        <p id="theBeginningText">You're alone in the woods around 600 meters away from the town you live in.</p>
+        <div id="monsterAttackingText">
+            <p>T</p>
+            <p>H</p>
+            <p>E</p>
+            <p>   </p>
+            <p>M</p>
+            <p>O</p>
+            <p>N</p>
+            <p>S</p>
+            <p>T</p>
+            <p>E</p>
+            <p>R</p>
+            <p>   </p>
+            <p>I</p>
+            <p>S</p>
+            <p>   </p>
+            <p>A</p>
+            <p>T</p>
+            <p>T</p>
+            <p>A</p>
+            <p>C</p>
+            <p>K</p>
+            <p>I</p>
+            <p>N</p>
+            <p>G</p>
+        </div>
+        <button onclick="theBeginning()" id="theBeginningButton1">Next</button>
+        <button onclick="theBeginningFlight()" id="theBeginningButton2">Flee!</button>
+        <button onclick="theBeginningFight()" id="theBeginningButton3">STAND YOUR GROUND.</button>
+        <p id="text1"></p> <!--Monster Health-->
+        <p id="text6"></p> <!--Player Damage-->
+        <button onclick="my9thFunction()" id="skillTreeBackButton">Back</button>
+        <div class="mainButtons">
+            <button onclick="my1stFunction()" id="attackButton"> Attack! </button>
+            <button id="upgradeCost" onclick="my2ndFunction()"> Buy a wooden sword! (10 gold) </button>
+            <p id="text3"> </p> <!--Amount Of Gold-->
+            <p id="text8"> </p> <!--Amount Of Exp-->
+        </div>
+        <button onclick="my6thFunction()" id="skillTreeButton">Open skill tree</button>
+        <p id="text2"></p> <!--Monster Has Died-->
+        <p id="text4"></p> <!--Damage Has Increased-->
+        <p id="text5"></p> <!--Gold Increase-->
+        <p id="text7"></p> <!--EXP Increase-->
+        <!--Text log system idea. Give the text a token when you occupy it and if the text has a token then skip to the other, if it doesn't, then occupy that one-->
+        
+        <div class="skillTreeDiv">
+            <button onclick="my8thFunction()" class="firstSkillTreeSkill first">Activate System (1XP)</button>
+            <button onclick="my10thFunction()" class="leftSkillTreeSkill" id="gluttony1">Locked (10XP)</button>
+            <button onclick="my11thFunction()" class="middleSkillTreeSkill" id="pride1">Locked (10XP</button>
+            <button onclick="my12thFunction()" class="rightSkillTreeSkill" id="greed1">Locked (10XP)</button>
+            <button onclick="my13thFunction()" class="leftSkillTreeSkill" id="gluttony2">Locked (100XP)</button>
+            <button onclick="my14thFunction()" class="middleSkillTreeSkill" id="pride2">Locked (100XP)</button>
+            <button onclick="my15thFunction()" class="rightSkillTreeSkill" id="greed2">Locked (100XP)</button>
+            <!--
+            <button class="leftSkillTreeSkill" id="gluttony3">test8</button>
+            <button class="middleSkillTreeSkill" id="pride3">test9</button>
+            <button class="rightSkillTreeSkill" id="greed3">test10</button>
+            <button class="leftSkillTreeSkill" id="gluttony4">test11</button>
+            <button class="middleSkillTreeSkill" id="pride4">test12</button>
+            <button class="rightSkillTreeSkill" id="greed4">test13</button> -->
+        </div>
+        <!--wireframe link https://wireframe.cc/eDRGk1-->
+
+        <script src="JS.js"></script>
+
+    </body>
+</html>

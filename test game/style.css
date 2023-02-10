@@ -1,0 +1,227 @@
+
+#monsterAttackingText{
+
+    display: none;
+
+}
+
+#monsterAttackingText p{
+
+    font-weight: bolder;
+    animation: anim 1s linear infinite;
+    display: inline-block;
+     
+}
+
+@keyframes anim{
+
+    0%{
+        color:red;
+    }
+    50%{
+        transform: translateY(8px);
+        color:red;
+    }
+    100%{
+        color: red;
+    }
+
+}
+#monsterAttackingText p:nth-child(1){ 
+
+    animation-delay: 0.2s;
+
+}
+#monsterAttackingText p:nth-child(2){ 
+
+    animation-delay: 0.4s;
+
+}
+#monsterAttackingText p:nth-child(3){ 
+
+    animation-delay: 0.6s;
+
+}
+#monsterAttackingText p:nth-child(4){ 
+
+    animation-delay: 0.8s;
+
+}
+#monsterAttackingText p:nth-child(5){ 
+
+    animation-delay: 0.8s;
+
+}
+#monsterAttackingText p:nth-child(6){ 
+
+    animation-delay: 1s;
+
+}
+#monsterAttackingText p:nth-child(7){ 
+
+    animation-delay: 1.2s;
+
+}
+#monsterAttackingText p:nth-child(8){ 
+
+    animation-delay: 1.4s;
+
+}
+#monsterAttackingText p:nth-child(9){ 
+
+    animation-delay: 1.6s;
+
+}
+#monsterAttackingText p:nth-child(10){ 
+
+    animation-delay: 1.8s;
+
+}
+#monsterAttackingText p:nth-child(11){ 
+
+    animation-delay: 2s;
+
+}
+#monsterAttackingText p:nth-child(12){ 
+
+    animation-delay: 2.4s;
+
+}
+#monsterAttackingText p:nth-child(13){ 
+
+    animation-delay: 2.2s;
+
+}
+#monsterAttackingText p:nth-child(14){ 
+
+    animation-delay: 2.4s;
+
+}
+#monsterAttackingText p:nth-child(15){ 
+
+    animation-delay: 3s;
+
+}
+#monsterAttackingText p:nth-child(16){ 
+
+    animation-delay: 2.6s;
+
+}
+#monsterAttackingText p:nth-child(17){ 
+
+    animation-delay: 2.8s;
+
+}
+#monsterAttackingText p:nth-child(18){ 
+
+    animation-delay: 3s;
+
+}
+#monsterAttackingText p:nth-child(19){ 
+
+    animation-delay: 3.2s;
+
+}
+#monsterAttackingText p:nth-child(20){ 
+
+    animation-delay: 3.4s;
+
+}
+#monsterAttackingText p:nth-child(21){ 
+
+    animation-delay: 3.6s;
+
+}
+#monsterAttackingText p:nth-child(22){ 
+
+    animation-delay: 3.8s;
+
+}
+#monsterAttackingText p:nth-child(23){ 
+
+    animation-delay: 4s;
+
+}
+#monsterAttackingText p:nth-child(24){ 
+
+    animation-delay: 4.2s;
+
+}
+
+
+
+
+.mainButtons{
+    display: none;
+}
+
+#skillTreeButton{
+    display: none;
+}
+
+#theBeginningButton3{
+    display: none;
+    width: 15%;
+    height: 20px;
+    overflow: visible;
+}
+
+#text1{
+    display: none;
+}
+
+#text6{
+    display: none;
+}
+
+#theBeginningButton2{
+    display: none;
+    margin-right: 10px;
+}
+
+#text3{
+    display: inline-block;
+}
+
+#text8{
+    display: inline-block;
+}
+
+#skillTreeBackButton{
+    display: none;
+}
+
+.skillTreeDiv{
+    display: none;
+    row-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    pointer-events: none;
+}
+
+.firstSkillTreeSkill{
+    grid-column: 1 /span 3;
+    padding: 10px;
+    margin-left: 43.5%;
+    margin-right: 43.5%;
+}
+
+.leftSkillTreeSkill{
+    padding: 10px;
+    margin-left: 60%;
+    margin-right: none;
+    background-color: gray;
+}
+
+.middleSkillTreeSkill{
+    padding: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: gray;
+}
+
+.rightSkillTreeSkill{
+    padding: 10px;
+    margin-left: none;
+    margin-right: 60%;
+    background-color: gray;
+}
