@@ -42,11 +42,22 @@ let greedSkill1 = document.getElementById("greed1");
 let greedSkill2 = document.getElementById("greed2");
 let upgradeCost = document.getElementById("upgradeCost");
 let monsterIsAttacking = document.getElementById("monsterAttackingText");
-
+let selectArea = document.getElementById("selectArea");
 
 
 monsterHealth.textContent = ("Monster's health is " + health);
 playerDmg.textContent = ("You currently deal " + attack + " damage!");
+
+//selectArea Buttons
+let currentArea = "nil"; 
+selectArea.addEventListener("change", function(){
+    currentArea = this.value;
+    if(currentArea === "inn"){my16thFunction()}
+    else if(currentArea === "blacksmith"){my17thFunction()};
+});
+
+innSelect.addEventListener("change", my16thFunction);
+blacksmithSelect.addEventListener("click", my17thFunction);
 
 function theBeginning(){ /* The "tutorial" */
 
@@ -310,14 +321,6 @@ function theBeginning(){ /* The "tutorial" */
 
 
     // goldAmount.style.display = "inline-block";
-
-
-
-
-
-
-
-
 
 
 
@@ -635,4 +638,13 @@ function my15thFunction(){ /*Hoarding/Greed 2 Skill Tree Skill */
     greedSkill2.style.backgroundColor = "gray";
     greedSkill2.textContent = "Hoarding (Awakened)";
     expAmount.textContent = ("You have " + exp + " XP!")
+}
+
+function my16thFunction(){
+    document.getElementById("mainBody").style.display = "none";
+    
+}
+
+function my17thFunction(){
+    document.getElementById("mainBody").style.display = "none";
 }
