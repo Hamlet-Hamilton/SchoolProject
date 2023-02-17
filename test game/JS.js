@@ -1,7 +1,7 @@
 let attack = 5;            
 let baseHealth = 100;        
 let health = 100;     
-let baseCost = 10;
+let baseCost = 5;
 let baseGoldDrop = 3;
 let gold = 0;
 let storyToken = 0;
@@ -28,6 +28,7 @@ let goldIncrease = document.getElementById("text5");
 let playerDmg = document.getElementById("text6");
 let expIncrease = document.getElementById("text7");
 let expAmount = document.getElementById("text8");
+let newAreaUnlocked = document.getElementById("text9");
 let mainButtons = document.getElementsByClassName("mainButtons")[0];
 let attackButton = document.getElementById("attackButton");
 let sTButton = document.getElementById("skillTreeButton");
@@ -43,6 +44,8 @@ let greedSkill2 = document.getElementById("greed2");
 let upgradeCost = document.getElementById("upgradeCost");
 let monsterIsAttacking = document.getElementById("monsterAttackingText");
 let selectArea = document.getElementById("selectArea");
+let areaButtons = document.getElementById("areaButtons");
+let wildernessSelect = document.getElementById("wildernessSelect");
 
 
 monsterHealth.textContent = ("Monster's health is " + health);
@@ -53,7 +56,8 @@ let currentArea = "nil";
 selectArea.addEventListener("change", function(){
     currentArea = this.value;
     if(currentArea === "inn"){my16thFunction()}
-    else if(currentArea === "blacksmith"){my17thFunction()};
+    else if(currentArea === "blacksmith"){my17thFunction()}
+    else if(currentArea === "wilderness"){my18thFunction()}
 });
 
 innSelect.addEventListener("change", my16thFunction);
@@ -312,10 +316,13 @@ function theBeginning(){ /* The "tutorial" */
     if(storyToken == 57){
         story.textContent = "Before you go out in the woods and hunt more monsters you'll need a better weapon.";
         beginningButton1.style.display = "none";
+        areaButtons.style.display = "block";
+        newAreaUnlocked.textContent = "You have unlocked new areas! (Inn, Blacksmith)";
+        timeout = setTimeout(my19thFunction, 4000);
     }
 
     if(storyToken == 58){
-        story.textContent = "";
+        story.textContent = "Now that you've bought a weapon it's time to test it out in the forest.";
     }
 
 
@@ -448,7 +455,7 @@ function my1stFunction(){ /* Monster health Function */
 
 function my2ndFunction(){ /* Upgrade Damage Function*/
 
-    if(gold > baseCost - 1){
+    if(gold > baseCost - 5){
 
         gold = gold - baseCost;
         baseCost = baseCost * 10;
@@ -456,6 +463,12 @@ function my2ndFunction(){ /* Upgrade Damage Function*/
         goldAmount.textContent = "You have " + gold + " gold!";
         dmgIncrease.textContent = "Your damage has increased!";
         timeout = setTimeout(my4thFunction, 4000);
+        if(storyToken == 57){
+            theBeginning();
+            wildernessSelect.style.display = "block";
+            newAreaUnlocked.textContent = "You have unlocked a new area! (Wilderness)";
+            timeout = setTimeout(my19thFunction, 4000);
+        }
         
     }
 
@@ -640,11 +653,37 @@ function my15thFunction(){ /*Hoarding/Greed 2 Skill Tree Skill */
     expAmount.textContent = ("You have " + exp + " XP!")
 }
 
-function my16thFunction(){
-    document.getElementById("mainBody").style.display = "none";
-    
+function my16thFunction(){ /*Inn area select function*/
+    mainButtons.style.display = "block";
+    sTButton.style.display = "block";
+    upgradeCost.style.display = "none";
+    monsterIsAttacking.style.display = "none";
+    monsterHealth.style.display = "none";
+    attackButton.style.display = "none";
 }
 
-function my17thFunction(){
-    document.getElementById("mainBody").style.display = "none";
+function my17thFunction(){ /*Blacksmith are select function */
+    mainButtons.style.display = "block";
+    upgradeCost.style.display = "block";
+    sTButton.style.display = "none";
+    monsterIsAttacking.style.display = "none";
+    monsterHealth.style.display = "none";
+    attackButton.style.display = "none";
+}
+
+function my18thFunction(){ /*Wilderness area select function */
+    mainButtons.style.display = "block";
+    upgradeCost.style.display = "none";
+    sTButton.style.display = "none";
+    monsterIsAttacking.style.display = "block";
+    monsterHealth.style.display = "block";
+    attackButton.style.display = "block";
+    if(storyToken == 58){
+        story.style.display = "none";
+    }
+
+}
+
+function my19thFunction(){ /* "New area unlocked" Timer Function */
+    newAreaUnlocked.textContent = "";
 }

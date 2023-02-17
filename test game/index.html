@@ -8,12 +8,13 @@
         
         <title>Document</title>
     </head>
-    <body id="mainBody">
+    <body class="mainBody">
         <div id="areaButtons">
             <form>
                 <select id="selectArea">
                     <option value=inn id="innSelect">Inn</option>
                     <option value=blacksmith id="blacksmithSelect">Blacksmith</option>
+                    <option value=wilderness id="wildernessSelect">Wilderness</option>
                 </select>
             </form>
         </div>
@@ -52,7 +53,7 @@
         <button onclick="my9thFunction()" id="skillTreeBackButton">Back</button>
         <div class="mainButtons">
             <button onclick="my1stFunction()" id="attackButton"> Attack! </button>
-            <button id="upgradeCost" onclick="my2ndFunction()"> Buy a wooden sword! (10 gold) </button>
+            <button id="upgradeCost" onclick="my2ndFunction()"> Buy a wooden sword! (5 gold) </button>
             <p id="text3"> </p> <!--Amount Of Gold-->
             <p id="text8"> </p> <!--Amount Of Exp-->
         </div>
@@ -61,6 +62,7 @@
         <p id="text4"></p> <!--Damage Has Increased-->
         <p id="text5"></p> <!--Gold Increase-->
         <p id="text7"></p> <!--EXP Increase-->
+        <p id="text9"> </p> <!--New Area Unlocked-->
         <!--Text log system idea. Give the text a token when you occupy it and if the text has a token then skip to the other, if it doesn't, then occupy that one-->
         
         <div class="skillTreeDiv">
