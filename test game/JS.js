@@ -54,10 +54,15 @@ playerDmg.textContent = ("You currently deal " + attack + " damage!");
 //selectArea Buttons
 let currentArea = "nil"; 
 selectArea.addEventListener("change", function(){
+    
     currentArea = this.value;
     if(currentArea === "inn"){my16thFunction()}
     else if(currentArea === "blacksmith"){my17thFunction()}
     else if(currentArea === "wilderness"){my18thFunction()}
+
+    if(storyToken == 58){
+        story.style.display = "none";
+    }
 });
 
 innSelect.addEventListener("change", my16thFunction);
@@ -527,7 +532,7 @@ function my6thFunction(){ /* Skill Tree Function */
         playerDmg.style.display = "none";
         sTButton.style.display = "none";
         sTDiv.style.display = "grid";
-    }
+    } else{my20thFunction()}
 
     if(exp == 1 && storyToken == 23){
         firstSTSkill.style.pointerEvents = "auto";
@@ -583,8 +588,6 @@ function my8thFunction(){ /* "Activate system" Skill Tree Skill */
 
 function my9thFunction(){ /*Back from skill tree*/
     
-
-
     if(storyToken == 23){
         sTDiv.style.display = "none";
         story.style.display = "block";
@@ -592,6 +595,18 @@ function my9thFunction(){ /*Back from skill tree*/
         playerDmg.style.display = "block";
         sTBButton.style.display = "none";
         theBeginning();
+    } else{
+        mainButtons.style.display = "block";
+        sTButton.style.display = "block";
+        upgradeCost.style.display = "none";
+        monsterIsAttacking.style.display = "none";
+        monsterHealth.style.display = "none";
+        attackButton.style.display = "none";
+        sTDiv.style.display = "none";
+        sTBButton.style.display = "none";
+        areaButtons.style.display = "block";
+        playerDmg.style.display = "block"; 
+        goldAmount.style.display = "inline-block";
     }
 
 }
@@ -678,12 +693,19 @@ function my18thFunction(){ /*Wilderness area select function */
     monsterIsAttacking.style.display = "block";
     monsterHealth.style.display = "block";
     attackButton.style.display = "block";
-    if(storyToken == 58){
-        story.style.display = "none";
-    }
-
+    
 }
 
 function my19thFunction(){ /* "New area unlocked" Timer Function */
     newAreaUnlocked.textContent = "";
+}
+
+function my20thFunction(){ //skill tree function (Endgame)
+    areaButtons.style.display = "none";
+    sTButton.style.display = "none";
+    sTDiv.style.display = "grid";
+    sTBButton.style.display = "block";
+    expAmount.style.display = "block";
+    playerDmg.style.display = "none"; 
+    goldAmount.style.display = "none";
 }
