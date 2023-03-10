@@ -327,7 +327,7 @@ function theBeginning(){ /* The "tutorial" */
     }
 
     if(storyToken == 58){
-        story.textContent = "Now that you've bought a weapon it's time to test it out in the forest.";
+        story.textContent = "Now that you've bought a weapon it's time to test it out in the wild.";
     }
 
 
@@ -538,33 +538,7 @@ function my6thFunction(){ /* Skill Tree Function */
         firstSTSkill.style.pointerEvents = "auto";
     }
 
-    if(exp >= 10 && activateSystem == true){
-        /*Gluttony*/
-        gluttonySkill1.style.pointerEvents = "auto";
-        gluttonySkill1.style.backgroundColor = "none";
-        /*Pride*/
-        prideSkill1.style.pointerEvents = "auto";
-        prideSkill1.style.backgroundColor = "none";
-        /*Pride*/
-        greedSkill1.style.pointerEvents = "auto";
-        greedSkill1.style.backgroundColor = "none";
-    }
-
-    if(exp >= 100 && gluttony == true){
-        gluttonySkill2.style.pointerEvents = "auto";
-        gluttonySkill2.style.backgroundColor = "none";
-    }
-
-    if(exp >= 100 && pride == true){
-        prideSkill2.style.pointerEvents = "auto";
-        prideSkill2.style.backgroundColor = "none";
-    }
     
-    if(exp >= 100 && hoarding == true){
-        greedSkill2.style.pointerEvents = "auto";
-        greedSkill2.style.backgroundColor = "none";
-    }
-
 }
 
 function my7thFunction(){ /* Exp Drop Timer Function */
@@ -596,7 +570,7 @@ function my9thFunction(){ /*Back from skill tree*/
         sTBButton.style.display = "none";
         theBeginning();
     } else{
-        mainButtons.style.display = "block";
+        mainButtons.style.display = "inline-block";
         sTButton.style.display = "block";
         upgradeCost.style.display = "none";
         monsterIsAttacking.style.display = "none";
@@ -619,16 +593,18 @@ function my10thFunction(){ /*Gluttony 1 Skill Tree Skill */
     gluttonySkill1.textContent = "Gluttony (Awakened)";
     gluttonySkill2.textContent = "Predation (100XP)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my11thFunction(){ /*Pride 1 Skill Tree Skill */
-    xp = exp - 10;
+    exp = exp - 10;
     pride = true;
     prideSkill1.style.pointerEvents = "none";
     prideSkill1.style.backgroundColor = "gray";
     prideSkill1.textContent = "Pride (Awakened)";
     prideSkill2.textContent = "Pity (100XP)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my12thFunction(){ /*Greed 1 Skill Tree Skill */
@@ -639,6 +615,7 @@ function my12thFunction(){ /*Greed 1 Skill Tree Skill */
     greedSkill1.textContent = "Greed (Awakened)";
     greedSkill2.textContent = "Hoarding (100XP)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my13thFunction(){ /*Predation/Gluttony 2 Skill Tree Skill */
@@ -648,6 +625,7 @@ function my13thFunction(){ /*Predation/Gluttony 2 Skill Tree Skill */
     gluttonySkill2.style.backgroundColor = "gray";
     gluttonySkill2.textContent = "Predation (Awakened)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my14thFunction(){ /*Pity/Pride 2 Skill Tree Skill */
@@ -657,6 +635,7 @@ function my14thFunction(){ /*Pity/Pride 2 Skill Tree Skill */
     prideSkill2.style.backgroundColor = "gray";
     prideSkill2.textContent = "Pity (Awakened)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my15thFunction(){ /*Hoarding/Greed 2 Skill Tree Skill */
@@ -666,6 +645,7 @@ function my15thFunction(){ /*Hoarding/Greed 2 Skill Tree Skill */
     greedSkill2.style.backgroundColor = "gray";
     greedSkill2.textContent = "Hoarding (Awakened)";
     expAmount.textContent = ("You have " + exp + " XP!")
+    my21stFunction();
 }
 
 function my16thFunction(){ /*Inn area select function*/
@@ -705,7 +685,75 @@ function my20thFunction(){ //skill tree function (Endgame)
     sTButton.style.display = "none";
     sTDiv.style.display = "grid";
     sTBButton.style.display = "block";
-    expAmount.style.display = "block";
+    expAmount.style.display = "inline-block";
     playerDmg.style.display = "none"; 
     goldAmount.style.display = "none";
+
+    console.log(activateSystem);
+    console.log(exp);
+    my21stFunction(); 
+
+}
+
+function my21stFunction(){ //skill tree function (2) (endagame)
+    if(exp >= 10 && activateSystem == true && gluttony == false){ /*Gluttony*/
+        gluttonySkill1.style.pointerEvents = "auto";
+        gluttonySkill1.style.backgroundColor = "white";
+    
+    }else{
+        gluttonySkill1.style.pointerEvents = "none";
+        gluttonySkill1.style.backgroundColor = "gray";
+
+    }
+
+    if(exp >= 10 && activateSystem == true && greed == false){ /*greed*/
+        greedSkill1.style.pointerEvents = "auto";
+        greedSkill1.style.backgroundColor = "white";
+        
+    }else{
+        greedSkill1.style.pointerEvents = "none";
+        greedSkill1.style.backgroundColor = "gray";
+
+    }
+
+    if(exp >= 10 && activateSystem == true && pride == false){ /*Pride*/
+        prideSkill1.style.pointerEvents = "auto";
+        prideSkill1.style.backgroundColor = "white";
+        
+    }else{
+        prideSkill1.style.pointerEvents = "none";
+        prideSkill1.style.backgroundColor = "gray";
+
+    }
+
+    if(exp >= 100 && gluttony == true && predation == false){ /*predation*/
+        gluttonySkill2.style.pointerEvents = "auto";
+        gluttonySkill2.style.backgroundColor = "white";
+
+    }else{
+        gluttonySkill2.style.pointerEvents = "none";
+        gluttonySkill2.style.backgroundColor = "gray";
+
+    }
+
+    if(exp >= 100 && greed == true && hoarding == false){ /*hoarding*/
+        greedSkill2.style.pointerEvents = "auto";
+        greedSkill2.style.backgroundColor = "white";
+
+    }else{
+        greedSkill2.style.pointerEvents = "none";
+        greedSkill2.style.backgroundColor = "gray";
+
+    }
+
+    if(exp >= 100 && pride == true && pity == false){ /*pity*/
+        prideSkill2.style.pointerEvents = "auto";
+        prideSkill2.style.backgroundColor = "white";
+
+    }else{
+        prideSkill2.style.pointerEvents = "none";
+        prideSkill2.style.backgroundColor = "gray";
+
+    }
+
 }

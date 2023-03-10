@@ -194,7 +194,7 @@
     display: none;
     row-gap: 100px;
     grid-template-columns: 1fr 1fr 1fr;
-    pointer-events: none;
+    
 }
 
 .firstSkillTreeSkill{
@@ -202,6 +202,20 @@
     padding: 10px;
     margin-left: 43.5%;
     margin-right: 43.5%;
+    background-color: white;
+    pointer-events: none;
+}
+
+.firstSkillTreeSkill:hover{
+
+    filter: brightness(75%);
+
+}
+
+.firstSkillTreeSkill:active{
+
+    filter: brightness(100%);
+
 }
 
 .leftSkillTreeSkill{
@@ -209,6 +223,19 @@
     margin-left: 60%;
     margin-right: none;
     background-color: gray;
+    
+}
+
+.leftSkillTreeSkill:hover{
+
+    filter: brightness(75%);
+
+}
+
+.leftSkillTreeSkill:active{
+
+    filter: brightness(100%);
+
 }
 
 .middleSkillTreeSkill{
@@ -216,6 +243,19 @@
     margin-left: 30%;
     margin-right: 30%;
     background-color: gray;
+    
+}
+
+.middleSkillTreeSkill:hover{
+
+    filter: brightness(75%);
+
+}
+
+.middleSkillTreeSkill:active{
+
+    filter: brightness(100%);
+
 }
 
 .rightSkillTreeSkill{
@@ -223,6 +263,50 @@
     margin-left: none;
     margin-right: 60%;
     background-color: gray;
+    
+}
+
+.rightSkillTreeSkill:hover{
+
+    filter: brightness(75%);
+
+}
+
+.rightSkillTreeSkill:active{
+
+    filter: brightness(100%);
+
+}
+
+
+#gluttony1{
+    pointer-events: none;
+
+}
+
+#gluttony2{
+    pointer-events: none;
+
+}
+
+#greed1{
+    pointer-events: none;
+
+}
+
+#greed2{
+    pointer-events: none;
+
+}
+
+#pride1{
+    pointer-events: none;
+    
+}
+
+#pride2{
+    pointer-events: none;
+    
 }
 
 #areaButtons{
