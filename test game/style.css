@@ -1,3 +1,8 @@
+body{
+    overflow: hidden;
+
+}
+
 #monsterAttackingText{
 
     display: none;
@@ -316,5 +321,31 @@
 
 #wildernessSelect{
     display: none;
+
+}
+
+/* Custom text on hover */
+
+.firstSkillTreeSkill:before{
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    height: 140px;
+    width: 380px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    border: solid 3px black;
+    overflow-wrap: break-word;
+
+}
+
+.firstSkillTreeSkill:hover:before{
+    opacity: 0.85;
+    visibility: visible;
 
 }
