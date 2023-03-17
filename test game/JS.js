@@ -552,7 +552,7 @@ function my8thFunction(){ /* "Activate system" Skill Tree Skill */
     activateSystem = true;
     sTBButton.style.display = "block";
     firstSTSkill.style.pointerEvents = "none";
-    firstSTSkill.style.backgroundColor = "gray";
+    firstSTSkill.style.backgroundColor = "lightcoral";
     firstSTSkill.textContent = "Activate system (Active)";
     greedSkill1.textContent = "Greed (10XP)";
     prideSkill1.textContent = "Pride (10XP)";
@@ -688,18 +688,20 @@ function my20thFunction(){ //skill tree function (Endgame)
     expAmount.style.display = "inline-block";
     playerDmg.style.display = "none"; 
     goldAmount.style.display = "none";
-
-    console.log(activateSystem);
-    console.log(exp);
     my21stFunction(); 
 
 }
 
 function my21stFunction(){ //skill tree function (2) (endagame)
+
     if(exp >= 10 && activateSystem == true && gluttony == false){ /*Gluttony*/
         gluttonySkill1.style.pointerEvents = "auto";
         gluttonySkill1.style.backgroundColor = "white";
     
+    }else if(gluttony == true){
+        gluttonySkill1.style.pointerEvents = "none";
+        gluttonySkill1.style.backgroundColor = "lightcoral";
+
     }else{
         gluttonySkill1.style.pointerEvents = "none";
         gluttonySkill1.style.backgroundColor = "gray";
@@ -710,6 +712,10 @@ function my21stFunction(){ //skill tree function (2) (endagame)
         greedSkill1.style.pointerEvents = "auto";
         greedSkill1.style.backgroundColor = "white";
         
+    }else if(greed == true){
+        greedSkill1.style.pointerEvents = "none";
+        greedSkill1.style.backgroundColor = "lightcoral";
+
     }else{
         greedSkill1.style.pointerEvents = "none";
         greedSkill1.style.backgroundColor = "gray";
@@ -720,6 +726,10 @@ function my21stFunction(){ //skill tree function (2) (endagame)
         prideSkill1.style.pointerEvents = "auto";
         prideSkill1.style.backgroundColor = "white";
         
+    }else if(pride == true){
+        prideSkill1.style.pointerEvents = "none";
+        prideSkill1.style.backgroundColor = "lightcoral";
+
     }else{
         prideSkill1.style.pointerEvents = "none";
         prideSkill1.style.backgroundColor = "gray";
@@ -729,6 +739,10 @@ function my21stFunction(){ //skill tree function (2) (endagame)
     if(exp >= 100 && gluttony == true && predation == false){ /*predation*/
         gluttonySkill2.style.pointerEvents = "auto";
         gluttonySkill2.style.backgroundColor = "white";
+
+    }else if(gluttony == true){
+        gluttonySkill2.style.pointerEvents = "none";
+        gluttonySkill2.style.backgroundColor = "lightcoral";
 
     }else{
         gluttonySkill2.style.pointerEvents = "none";
@@ -740,6 +754,10 @@ function my21stFunction(){ //skill tree function (2) (endagame)
         greedSkill2.style.pointerEvents = "auto";
         greedSkill2.style.backgroundColor = "white";
 
+    }else if(hoarding == true){
+        greedSkill2.style.pointerEvents = "none";
+        greedSkill2.style.backgroundColor = "lightcoral";
+
     }else{
         greedSkill2.style.pointerEvents = "none";
         greedSkill2.style.backgroundColor = "gray";
@@ -749,6 +767,10 @@ function my21stFunction(){ //skill tree function (2) (endagame)
     if(exp >= 100 && pride == true && pity == false){ /*pity*/
         prideSkill2.style.pointerEvents = "auto";
         prideSkill2.style.backgroundColor = "white";
+
+    }else if(pity == true){
+        prideSkill2.style.pointerEvents = "none";
+        prideSkill2.style.backgroundColor = "lightcoral";
 
     }else{
         prideSkill2.style.pointerEvents = "none";
