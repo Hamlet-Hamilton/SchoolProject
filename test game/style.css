@@ -326,10 +326,8 @@ body{
 
 /* Custom text on hover */
 
-.firstSkillTreeSkill:before{
-    content: attr(data-hover);
-    visibility: hidden;
-    opacity: 0;
+#firstSkillText{
+    display: none;
     height: 140px;
     width: 380px;
     background-color: black;
@@ -337,15 +335,15 @@ body{
     text-align: left;
     padding: 5px;
     position: absolute;
-    z-index: 1;
-    top: 110%;
+    left: 0;
     border: solid 3px black;
     overflow-wrap: break-word;
+    opacity: 0.85;
 
 }
 
-.firstSkillTreeSkill:hover:before{
-    opacity: 0.85;
-    visibility: visible;
+.firstSkillTreeSkill:hover + #firstSkillText{
+    display: block;
+    
 
 }

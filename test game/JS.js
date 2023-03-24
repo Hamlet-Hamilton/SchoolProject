@@ -779,3 +779,32 @@ function my21stFunction(){ //skill tree function (2) (endagame)
     }
 
 }
+
+function my22ndFunction(){
+
+    storyToken=21;
+    exp = 1; 
+    story.style.display = "none";
+    monsterIsAttacking.style.display = "block";
+    beginningButton1.style.display = "none";
+    beginningButton2.style.display = "inline-block";
+    beginningButton3.style.display = "inline-block";
+    story.style.display = "block";
+    beginningButton1.style.display = "block";
+    story.style.display = "none";
+    beginningButton2.style.display = "none";
+    beginningButton3.style.display = "none";
+    monsterHealth.style.display = "block";
+    mainButtons.style.display = "block";
+    attackButton.style.display = "inline-block";
+    goldAmount.style.display = "inline-block";
+    upgradeCost.style.display = "none";
+    monsterHealth.style.display = "none";
+    playerDmg.style.display = "none";
+    mainButtons.style.display = "none";
+    monsterIsAttacking.style.display = "none";
+    story.style.display = "block";
+    expIncrease.textContent = ("+ " + Math.floor(baseExpDrop) + " XP");
+    timeout = setTimeout(my7thFunction, 4000);
+
+}
