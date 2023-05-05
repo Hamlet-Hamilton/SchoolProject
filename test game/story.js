@@ -1,3 +1,5 @@
+
+
 function theBeginning(){ /* The "tutorial" */
 
     /*The First Encounter */
@@ -7,8 +9,6 @@ function theBeginning(){ /* The "tutorial" */
 
     if(storyToken == 1){
         story.textContent = ("You took on an F-rank herb harvesting quest from the adventurer guild in your town.");
-        story.style.backgroundColor = "red";
-        backgroundChanger(story);
     }
 
     if(storyToken == 2){

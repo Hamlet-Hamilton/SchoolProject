@@ -52,19 +52,10 @@ function displayChanger(x, y){
 }
 
 
-let tempVar1 = sum(10, 1, 100);
-let tempVar2 = sum(10, 100, false);
-let tempVar3 = sum(10, 1900, "köttbulle");
-
-
-
 monsterHealth.textContent = ("Monster's health is " + health);
 playerDmg.textContent = ("You currently deal " + attack + " damage!");
 
-function backgroundChanger(x)
-{
-    x.style.backgroundColor = "red";
-}
+
 
 //selectArea Buttons
 let currentArea = "nil"; 
