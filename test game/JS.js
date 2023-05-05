@@ -51,6 +51,11 @@ let wildernessSelect = document.getElementById("wildernessSelect");
 monsterHealth.textContent = ("Monster's health is " + health);
 playerDmg.textContent = ("You currently deal " + attack + " damage!");
 
+function backgroundChanger(x)
+{
+    x.style.backgroundColor = "red";
+}
+
 //selectArea Buttons
 let currentArea = "nil"; 
 selectArea.addEventListener("change", function(){
@@ -77,6 +82,8 @@ function theBeginning(){ /* The "tutorial" */
 
     if(storyToken == 1){
         story.textContent = ("You took on an F-rank herb harvesting quest from the adventurer guild in your town.");
+        story.style.backgroundColor = "red";
+        backgroundChanger(story);
     }
 
     if(storyToken == 2){
@@ -458,6 +465,11 @@ function my1stFunction(){ /* Monster health Function */
 
 } 
 
+function test05(x01, x02, x03) {
+    x01.style.backgroundColor = "block";
+}
+
+
 function my2ndFunction(){ /* Upgrade Damage Function*/
 
     if(gold > baseCost - 5){
@@ -692,7 +704,7 @@ function my20thFunction(){ //skill tree function (Endgame)
 
 }
 
-function my21stFunction(){ //skill tree function (2) (endagame)
+function my21stFunction(){ //skill tree function (2) (endgame)
 
     if(exp >= 10 && activateSystem == true && gluttony == false){ /*Gluttony*/
         gluttonySkill1.style.pointerEvents = "auto";
@@ -740,7 +752,7 @@ function my21stFunction(){ //skill tree function (2) (endagame)
         gluttonySkill2.style.pointerEvents = "auto";
         gluttonySkill2.style.backgroundColor = "white";
 
-    }else if(gluttony == true){
+    }else if(predation == true){
         gluttonySkill2.style.pointerEvents = "none";
         gluttonySkill2.style.backgroundColor = "lightcoral";
 
