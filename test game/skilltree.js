@@ -128,13 +128,13 @@ function hoardingSkillFunction(){ /*Hoarding/Greed 2 Skill Tree Skill */
 }
 
 function skillTreeOpening(){ //skill tree function (Endgame)
-    areaButtons.style.display = "none";
-    sTButton.style.display = "none";
-    sTDiv.style.display = "grid";
-    sTBButton.style.display = "block";
-    expAmount.style.display = "inline-block";
-    playerDmg.style.display = "none"; 
-    goldAmount.style.display = "none";
+    displayChanger(areaButtons, "none");
+    displayChanger(sTButton, "none");
+    displayChanger(sTDiv, "grid");
+    displayChanger(sTBButton, "block");
+    displayChanger(expAmount, "inline-block");
+    displayChanger(playerDmg, "none");
+    displayChanger(goldAmount, "none");
     skillTreeAppearance(); 
 
 }
