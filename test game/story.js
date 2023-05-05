@@ -268,11 +268,6 @@ function theBeginning(){ /* The "tutorial" */
 
 
 
-    // goldAmount.style.display = "inline-block";
-
-
-
-
 
 } 
 

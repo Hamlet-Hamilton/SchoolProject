@@ -11,10 +11,11 @@ function test05(x01, x02, x03) {
 function skillTreeFunction(){ /* Skill Tree Function */
 
     if(storyToken == 23){
-        story.style.display = "none";
-        playerDmg.style.display = "none";
-        sTButton.style.display = "none";
-        sTDiv.style.display = "grid";
+        displayChanger(story, "none");
+        displayChanger(playerDmg, "none");
+        displayChanger(sTButton, "none");
+        displayChanger(sTDiv, "grid");
+        
     } else{skillTreeOpening()}
 
     if(exp == 1 && storyToken == 23){
@@ -27,7 +28,7 @@ function skillTreeFunction(){ /* Skill Tree Function */
 function systemSkillFunction(){ /* "Activate system" Skill Tree Skill */
     exp = exp - 1;
     activateSystem = true;
-    sTBButton.style.display = "block";
+    displayChanger(sTBButton, "block");
     firstSTSkill.style.pointerEvents = "none";
     firstSTSkill.style.backgroundColor = "lightcoral";
     firstSTSkill.textContent = "Activate system (Active)";
