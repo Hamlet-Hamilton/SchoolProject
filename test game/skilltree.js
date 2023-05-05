@@ -231,26 +231,17 @@ function skipButton(){ //skip button function
 
     storyToken=21;
     exp = 1; 
-    story.style.display = "none";
-    monsterIsAttacking.style.display = "block";
-    beginningButton1.style.display = "none";
-    beginningButton2.style.display = "inline-block";
-    beginningButton3.style.display = "inline-block";
-    story.style.display = "block";
-    beginningButton1.style.display = "block";
-    story.style.display = "none";
-    beginningButton2.style.display = "none";
-    beginningButton3.style.display = "none";
-    monsterHealth.style.display = "block";
-    mainButtons.style.display = "block";
-    attackButton.style.display = "inline-block";
-    goldAmount.style.display = "inline-block";
-    upgradeCost.style.display = "none";
-    monsterHealth.style.display = "none";
-    playerDmg.style.display = "none";
-    mainButtons.style.display = "none";
-    monsterIsAttacking.style.display = "none";
-    story.style.display = "block";
+    displayChanger(beginningButton1, "block");
+    displayChanger(beginningButton2, "none");
+    displayChanger(beginningButton3, "none");
+    displayChanger(attackButton, "inline-block");
+    displayChanger(goldAmount, "inline-block");
+    displayChanger(upgradeCost, "none");
+    displayChanger(monsterHealth, "none");
+    displayChanger(playerDmg, "none");
+    displayChanger(mainButtons, "none");
+    displayChanger(monsterIsAttacking, "none");
+    displayChanger(story, "block");
     expIncrease.textContent = ("+ " + Math.floor(baseExpDrop) + " XP");
     timeout = setTimeout(expDropTimer, 4000);
 
