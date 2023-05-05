@@ -41,24 +41,25 @@ function systemSkillFunction(){ /* "Activate system" Skill Tree Skill */
 function skillTreeClosing(){ /*Back from skill tree*/
     
     if(storyToken == 23){
-        sTDiv.style.display = "none";
-        story.style.display = "block";
-        beginningButton1.style.display = "block";
-        playerDmg.style.display = "block";
-        sTBButton.style.display = "none";
+        displayChanger(sTDiv, "none");
+        displayChanger(story, "block");
+        displayChanger(beginningButton1, "block");
+        displayChanger(playerDmg, "block");
+        displayChanger(sTBButton, "none");
         theBeginning();
     } else{
-        mainButtons.style.display = "inline-block";
-        sTButton.style.display = "block";
-        upgradeCost.style.display = "none";
-        monsterIsAttacking.style.display = "none";
-        monsterHealth.style.display = "none";
-        attackButton.style.display = "none";
-        sTDiv.style.display = "none";
-        sTBButton.style.display = "none";
-        areaButtons.style.display = "block";
-        playerDmg.style.display = "block"; 
-        goldAmount.style.display = "inline-block";
+        displayChanger(mainButtons, "inline-block");
+        displayChanger(sTButton, "block");
+        displayChanger(upgradeCost, "none");
+        displayChanger(monsterIsAttacking, "none");
+        displayChanger(monsterHealth, "none");
+        displayChanger(attackButton, "none");
+        displayChanger(sTDiv, "none");
+        displayChanger(sTBButton, "none");
+        displayChanger(areaButtons, "block");
+        displayChanger(playerDmg, "block");
+        displayChanger(goldAmount, "inline-block");
+        
     }
 
 }
