@@ -28,11 +28,13 @@ function theBeginning(){ /* The "tutorial" */
     }
 
     if(storyToken == 6){
-        story.style.display = "none";
-        monsterIsAttacking.style.display = "block";
-        beginningButton1.style.display = "none";
-        beginningButton2.style.display = "inline-block";
-        beginningButton3.style.display = "inline-block";
+
+        displayChanger(story, "none");
+        displayChanger(monsterIsAttacking, "block");
+        displayChanger(beginningButton1, "none");
+        displayChanger(beginningButton2, "inline-block");
+        displayChanger(beginningButton3, "inline-block");
+        
     }
 
     /* The Aftermath */
