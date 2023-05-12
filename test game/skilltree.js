@@ -141,7 +141,7 @@ function skillTreeOpening(){ //skill tree function (Endgame)
 
 function skillTreeAppearance(){ //skill tree skill function (2) (endgame)
 
-    if(exp >= 10 && activateSystem == true && gluttony == false){ /*Gluttony*/
+    if(exp >= 10 && activateSystem && !gluttony){ /*Gluttony*/
         gluttonySkill1.style.pointerEvents = "auto";
         gluttonySkill1.style.backgroundColor = "white";
     
@@ -227,7 +227,7 @@ function skillTreeAppearance(){ //skill tree skill function (2) (endgame)
 
 }
 
-function skipButton(){ //skip button function
+/**function skipButton(){ //skip button function
 
     storyToken=21;
     exp = 1; 
@@ -245,4 +245,4 @@ function skipButton(){ //skip button function
     expIncrease.textContent = ("+ " + Math.floor(baseExpDrop) + " XP");
     timeout = setTimeout(expDropTimer, 4000);
 
-}
+} **/
