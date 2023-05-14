@@ -194,9 +194,26 @@ body{
 
 }
 
+#attackButton{
+    display: none;
+    margin-left: 42.5%;
+    margin-right: 30%;
+    margin-top: 15%;
+    width: 15%;
+    height: 60px;
+    font-size: larger;
+    border: 3px solid black;
+    background-color: white;
 
+}
 
+#attackButton:hover{
+    filter: brightness(80%);
+}
 
+#attackButton:active{
+    filter: brightness(100%);
+}
 .mainButtons{
     display: none;
 }
@@ -207,6 +224,8 @@ body{
 
 #text1{
     display: none;
+    font-size: 30px;
+    text-align: center;
 }
 
 #text6{
