@@ -296,7 +296,7 @@ function theBeginningFight(){
     displayChanger(monsterHealth, "block");
     displayChanger(mainButtons, "block");
     displayChanger(attackButton, "inline-block");
-    displayChanger(goldAmount, "inline-block");
+    displayChanger(goldAmount, "block");
     displayChanger(upgradeCost, "none");
 
     if(storyToken == 29){

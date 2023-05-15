@@ -52,25 +52,27 @@
         <button onclick="theBeginningFlight()" id="theBeginningButton2">Flee!</button>
         <button onclick="theBeginningFight()" id="theBeginningButton3">STAND YOUR GROUND.</button>
         <p id="text1"></p> <!--Monster Health-->
-        <p id="text6"></p> <!--Player Damage-->
         <button onclick="skillTreeClosing()" id="skillTreeBackButton">Back</button>
         <div class="mainButtons">
             <button onclick="monsterFunction()" id="attackButton"> Attack! </button>
             <button id="upgradeCost" onclick="buyWeapon()"> Buy a wooden sword! (5 gold) </button>
+        </div>
+        <div id="textCollection">
+            <p id="text2"></p> <!--Monster Has Died-->
+            <p id="text4"></p> <!--Damage Has Increased-->
+            <p id="text5"></p> <!--Gold Increase-->
+            <p id="text7"></p> <!--EXP Increase-->
+            <p id="text9"> </p> <!--New Area Unlocked-->
+            <p id="text6"></p> <!--Player Damage-->
             <p id="text3"> </p> <!--Amount Of Gold-->
             <p id="text8"> </p> <!--Amount Of Exp-->
         </div>
         <button onclick="skillTreeFunction()" id="skillTreeButton">Open skill tree</button>
-        <p id="text2"></p> <!--Monster Has Died-->
-        <p id="text4"></p> <!--Damage Has Increased-->
-        <p id="text5"></p> <!--Gold Increase-->
-        <p id="text7"></p> <!--EXP Increase-->
-        <p id="text9"> </p> <!--New Area Unlocked-->
         <!--Text log system idea. Give the text a token when you occupy it and if the text has a token then skip to the other, if it doesn't, then occupy that one-->
         
         <div class="skillTreeDiv">
             <button onclick="systemSkillFunction()" class="firstSkillTreeSkill">Activate System (1XP)</button>
-            <div id=firstSkillText>Activate the system.</div>
+            <!--<div id=firstSkillText>Activate the system.</div>-->
             <button onclick="gluttonySkillFunction()" class="leftSkillTreeSkill" id="gluttony1">Locked (10XP)</button>
             <button onclick="prideSkillFunction()" class="middleSkillTreeSkill" id="pride1">Locked (10XP)</button>
             <button onclick="greedSkillFunction()" class="rightSkillTreeSkill" id="greed1">Locked (10XP)</button>
