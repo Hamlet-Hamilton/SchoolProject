@@ -58,7 +58,7 @@ function skillTreeClosing(){ /*Back from skill tree*/
         displayChanger(sTBButton, "none");
         displayChanger(areaButtons, "block");
         displayChanger(playerDmg, "block");
-        displayChanger(goldAmount, "inline-block");
+        displayChanger(goldAmount, "block");
         
     }
 
@@ -132,7 +132,7 @@ function skillTreeOpening(){ //skill tree function (Endgame)
     displayChanger(sTButton, "none");
     displayChanger(sTDiv, "grid");
     displayChanger(sTBButton, "block");
-    displayChanger(expAmount, "inline-block");
+    displayChanger(expAmount, "block");
     displayChanger(playerDmg, "none");
     displayChanger(goldAmount, "none");
     skillTreeAppearance(); 
