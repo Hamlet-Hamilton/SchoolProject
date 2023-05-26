@@ -108,7 +108,7 @@ function theBeginning(){ /* The "tutorial" */
         displayChanger(mainButtons, "inline-block");
         displayChanger(attackButton, "none");
         displayChanger(goldAmount, "none");
-        
+        displayChanger(expAmount, "block")
     }
 
     else if(storyToken == 24){
@@ -257,7 +257,7 @@ function theBeginning(){ /* The "tutorial" */
     else if(storyToken == 57){
         story.textContent = "Before you go out in the woods and hunt more monsters you'll need a better weapon.";
         displayChanger(beginningButton1, "none");
-        displayChanger(areaButtons, "block");
+        displayChanger(areaButtons, "inline-block");
         newAreaUnlocked.textContent = "You have unlocked new areas! (Inn, Blacksmith)";
         timeout = setTimeout(newAreaTimer, 4000);
     }
@@ -265,7 +265,6 @@ function theBeginning(){ /* The "tutorial" */
     else if(storyToken == 58){
         story.textContent = "Now that you've bought a weapon it's time to test it out in the wild.";
     }
-
 
 
 

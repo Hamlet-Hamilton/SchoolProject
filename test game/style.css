@@ -6,6 +6,7 @@ body{
 #theBeginningText{
     text-align: center;
     font-weight: bolder;
+    
 }
 
 #theBeginningButton1{
@@ -268,7 +269,7 @@ body{
 
 #upgradeCost{
     display: none;
-    margin-left: 36%;
+    margin-left: 38%;
     margin-right: 30%;
     margin-top: 15%;
     width: 25%;
@@ -307,7 +308,7 @@ body{
 }
 
 #text8{
-    display: inline-block;
+    display: none;
     margin: 1px;
 }
 
@@ -460,7 +461,8 @@ body{
 }
 
 #areaButtons{
-    float: right;
+
+    margin-left: 93%;
     display: none;
 }
 

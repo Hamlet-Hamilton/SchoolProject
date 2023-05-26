@@ -67,8 +67,9 @@ selectArea.addEventListener("change", function(){
     else if(currentArea === "wilderness"){wildernessArea()}
 
     if(storyToken == 58){
-        displayNone(story);
-   }
+        displayChanger(story, "none");
+
+    }
 
 });
 
